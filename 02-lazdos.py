@@ -17,7 +17,7 @@ def generuotiZaideja():
         print(f'Zaidima pradeda {antrasZaidejas}. Jus busite Pirmasis zaidejas.')
         ataskaita.write(f'Zaidima pradeda zaidejas {antrasZaidejas}. Jis bus vadinamas Pirmuoju zaideju.\n')
 
-def imtiLazdeles(txt):
+def imtiLazdeles(txt, lazdeles):
     kiekIma = int(input(f'Kiek lazdeliu ims {txt} zaidejas (nuo 1 iki 3)? '))
     if 0 < kiekIma < 4 and kiekIma <= lazdeles:
         ataskaita.write(f'{txt} zaidejas ima {kiekIma} lazdele(s).\n')
@@ -25,28 +25,29 @@ def imtiLazdeles(txt):
     else:
         print("Negalimas skaicius. Bandykite dar karta.")
         ataskaita.write(f'{txt} zaidejas bando imti {kiekIma} - negalimas skaicius. Bus bandoma dar karta.\n')
-        return imtiLazdeles(txt)
-    
+        return imtiLazdeles(txt, lazdeles)
+
+def atimtiLazdeles(txt, txt2, num, lazdeles):
+    lazdeles -= num
+    print(f'Lieka {lazdeles} lazdele(s).')
+    ataskaita.write(f'Lieka {lazdeles} lazdele(s).\n')
+    if lazdeles <= 0:
+        print(f'Paskutine lazdele paeme {txt} zaidejas. Zaidima laimejo {txt2} zaidejas.')
+        ataskaita.write(f'Paskutine lazdele paeme {txt} zaidejas. Zaidima laimejo {txt2} zaidejas.\n')
+    return lazdeles
+
 generuotiZaideja()   
 lazdeles = int(input('Su kiek lazdeliu zaisite? '))
 ataskaita.write(f'Bus zaidziama su {lazdeles} lazdeliu.\n')
 
 while lazdeles > 0:
-    kiekImaPirmas = imtiLazdeles("Pirmasis")
-    lazdeles -= kiekImaPirmas
-    print(f'Lieka {lazdeles} lazdele(s).')
-    ataskaita.write(f'Lieka {lazdeles} lazdele(s).\n')
-    if lazdeles <= 0:
-        print("Paskutine lazdele paeme Pirmasis zaidejas. Zaidima laimejo Antrasis zaidejas.")
-        ataskaita.write("Paskutine lazdele paeme Pirmasis zaidejas. Zaidima laimejo Antrasis zaidejas.\n")
-        break
-    kiekImaAntras =  imtiLazdeles("Antrasis")
-    lazdeles -= kiekImaAntras
-    print(f'Lieka {lazdeles} lazdele(s).')
-    ataskaita.write(f'Lieka {lazdeles} lazdele(s).\n')
-    if lazdeles <= 0:
-        print("Paskutine lazdele paeme Antrasis zaidejas. Zaidima laimejo Pirmasis zaidejas.")
-        ataskaita.write("Paskutine lazdele paeme Antrasis zaidejas. Zaidima laimejo Pirmasis zaidejas.\n")
-        break
+    kiekImaPirmas = imtiLazdeles("Pirmasis", lazdeles)
+    lazdeles = atimtiLazdeles("Pirmasis", "Antrasis", kiekImaPirmas, lazdeles)
+    
+    kiekImaAntras =  imtiLazdeles("Antrasis", lazdeles)
+    lazdeles = atimtiLazdeles("Antrasis", "Pirmasis", kiekImaAntras, lazdeles)
 
 ataskaita.close()
+
+
+
