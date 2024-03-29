@@ -1,0 +1,14 @@
+Vienas zaidejas ivede varda A.
+Kitas zaidejas ivede varda B.
+Zaidima pradeda zaidejas A. Jis bus vadinamas Pirmuoju zaideju.
+Bus zaidziama su 10 lazdeliu.
+Pirmasis zaidejas ima 3 lazdele(s).
+Lieka 7 lazdele(s).
+Antrasis zaidejas ima 3 lazdele(s).
+Lieka 4 lazdele(s).
+Pirmasis zaidejas ima 3 lazdele(s).
+Lieka 1 lazdele(s).
+Antrasis zaidejas bando imti 0 - negalimas skaicius. Bus bandoma dar karta.
+Antrasis zaidejas ima 1 lazdele(s).
+Lieka 0 lazdele(s).
+Paskutine lazdele paeme Antrasis zaidejas. Zaidima laimejo Pirmasis zaidejas.

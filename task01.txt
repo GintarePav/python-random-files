@@ -1,0 +1,20 @@
+Zaidejas ivede skaiciu 5.
+Kompiuteris sugeneravo skaiciu 1.
+Zaidejas ivede negalima skaiciu - -1. Spejimas nesiskaito.
+Zaidejas ivede negalima skaiciu - 0. Spejimas nesiskaito.
+1-uoju spejimu zaidejas ivede skaiciu 1 ir atspejo teisingai.
+Spejimu skaicius: 1.
+Negalimu spejimu skaicius: 2
+Zaidejas nusprende kartoti zaidima.
+Zaidejas ivede skaiciu 6.
+Kompiuteris sugeneravo skaiciu 5.
+1-uoju spejimu zaidejas ivede skaiciu 1. Kompiuterio sugeneruotas skaicius didesnis.
+2-uoju spejimu zaidejas ivede skaiciu 7. Kompiuterio sugeneruotas skaicius mazesnis.
+3-uoju spejimu zaidejas ivede skaiciu 2. Kompiuterio sugeneruotas skaicius didesnis.
+4-uoju spejimu zaidejas ivede skaiciu 3. Kompiuterio sugeneruotas skaicius didesnis.
+5-uoju spejimu zaidejas ivede skaiciu 4. Kompiuterio sugeneruotas skaicius didesnis.
+6-uoju spejimu zaidejas ivede skaiciu 5 ir atspejo teisingai.
+Spejimu skaicius: 6.
+Negalimu spejimu skaicius: 0
+Zaidejas nusprende zaidimo nekartoti.
+Zaidejas zaide 2 kartus/a.
